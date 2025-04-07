@@ -13,6 +13,8 @@ try {
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  reactStrictMode: true,
+  swcMinify: true,
   eslint: {
     ignoreDuringBuilds: true,
   },
@@ -27,7 +29,9 @@ const nextConfig = {
     parallelServerBuildTraces: true,
     parallelServerCompiles: true,
   },
+  
 }
+module.exports = nextConfig
 
 if (userConfig) {
   // ESM imports will have a "default" property
